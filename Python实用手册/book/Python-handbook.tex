@@ -1,0 +1,43 @@
+\documentclass[UTF8,a5paper,10pt]{ctexbook}
+
+\usepackage[utf8]{inputenc}
+% \usepackage{ctex} %导入中文包
+\usepackage{geometry} %设置页边距的包
+
+\usepackage{pdfpages} %本文最重要的一个包，就是将PDF文件加入到封面位置
+\usepackage{ulem}
+\makeatletter
+\renewcommand\tableofcontents{%
+    \thispagestyle{empty}
+    \section*{\contentsname
+        \@mkboth{%
+           \MakeUppercase\contentsname}{\MakeUppercase\contentsname}}%
+    \@starttoc{toc}%
+    \newpage
+    }
+
+\geometry{left=2.5cm,right=2cm,top=2.54cm,bottom=2.54cm} %设置书籍的页边距
+
+\title{大学计算机基础（理科）Python实用手册}
+\author{Dill Chu编著}
+
+\begin{document}
+\chapter*{第一版前言}
+\addcontentsline{toc}{chapter}{前言}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+大学计算机基础课程是计算机学院承担教学任务，
+在北航学院托管开设的信息大类基础课程之一，是全体理科大类及相关学院强基计划、拔尖计划相关专业的学生在大一时应当修习的一门基础课程。
+课程主要内容涵盖\dotuline{计算机组成原理}、\dotuline{编译原理}、\dotuline{Python基础语法}、\dotuline{程序控制结构}、\dotuline{算法基础}、\dotuline{图表绘制}、\dotuline{数据分析}、\dotuline{GUI设计}等内容。课程内容丰富，基本涵盖了理科大类对口各专业
+在未来使用计算机作为工具，在实际科研或工作中解决问题的需求，或是提供了较好的入门指导工作，可以培养学习者的计算思维和运用计算机解决具体问题的能力。无论是否有计算机使用经验，是否有程序编写或脚本编写经历，在学习本课程后
+都将具有相应的能力。
+
+具体的课程内容与任务方面。课程主要
+
+正如前面所说，本课程授课过程面临时间紧，任务重的困难，对于少部分没有计算机基础或使用经验的同学来说，学习这门课程的过程中可能会面临较大的困难。这往往体现在开展实验实操时进度不佳，或面对的困难较多而疲于应对。
+而苦于授课教师和助教精力有限，分身乏术，在提供实验指导方面可能会有覆盖不到的地方，对部分同学的学习带来一定的压力，甚至是阻力。
+\newpage
+\tableofcontents
+
+\end{document}
