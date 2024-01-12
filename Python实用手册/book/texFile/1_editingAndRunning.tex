@@ -1,0 +1,20 @@
+\chapter{Python编辑及运行环境配置}
+\section{Anaconda的下载与安装}
+\subsection{写在前面}
+在本课程中，我们选择安装anaconda这一Python发行版进行学习与开发。一方面是因为anaconda在安装时不仅仅能够安装一个python解释器，
+其也会同时安装ipython kernel，Jupyter notebook，matplotlib，scipy，numpy等多个常用的（也就是本课程中会用到的）几个第三方库。另一方面，anaconda提供Spyder这一高集成度，
+便于初学者学习和调试的IDE，可以提供给我们“开箱即用”的体验。
+
+如果你想要挑战自己，当然可以自行到Python项目官网\footnote{https://python.org}上自行下载和安装Python解释器，而后使用pip包管理工具安装
+我们所需的各类第三方库或者第三方组件（包括Spyder，也可以通过pip来自动安装）。但在正式开始教程之前，需要强调，作为初学者，请不要同时安装
+纯净Python解释器和anaconda，即不要
+让使用下载的Python安装包所安装的python解释器同anaconda在同一台电脑上并存，因为此时你的电脑里将同时有两个python运行环境，且这两个运
+行环境没有通过环境管理器进行管理，其激活次序，即运行python脚本文件时正在使用的python解释器，或是尝试使用pip安装第三方库所指向的环境不易明确。
+总之，作为课程的初学者，也是本手册后面的安排，我们将基于anaconda（conda+python解释器）进行介绍，包括环境配置，工具使用等，
+所有代码也将会在这个环境下进行运行。
+\subsection{Anaconda下载源的选择}
+Anaconda现已实现完善的公司化运营，可以访问其网站下载Anaconda：
+
+https://www.anaconda.com/download
+
+但通常，出于下载速度的考量，我们选择使用校园网联合镜像站的方式下载Anaconda，如清华大学TUNA协会，
