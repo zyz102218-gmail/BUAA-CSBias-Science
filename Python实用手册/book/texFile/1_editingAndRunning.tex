@@ -12,9 +12,31 @@
 行环境没有通过环境管理器进行管理，其激活次序，即运行python脚本文件时正在使用的python解释器，或是尝试使用pip安装第三方库所指向的环境不易明确。
 总之，作为课程的初学者，也是本手册后面的安排，我们将基于anaconda（conda+python解释器）进行介绍，包括环境配置，工具使用等，
 所有代码也将会在这个环境下进行运行。
-\subsection{Anaconda下载源的选择}
+\subsection{Anaconda下载与安装}
 Anaconda现已实现完善的公司化运营，可以访问其网站下载Anaconda：
 
 https://www.anaconda.com/download
 
-但通常，出于下载速度的考量，我们选择使用校园网联合镜像站的方式下载Anaconda，如清华大学TUNA协会，
+但通常，出于下载速度的考量，我们选择使用校园网联合镜像站的方式下载Anaconda，这不仅仅可以提供更快的安装包下载速度，同时其分发的
+安装包也会将其中的默认镜像站替换成自己的分发站点，从而提供更高的pip与conda下载与更新速度。提供镜像站的组织有很多，如清华大学TUNA协会，中国科学技术大学所等高校及高校学生组织
+所提供的下载源，此处以清华大学TUNA协会提供的下载源为例。
+
+访问https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/ \footnote{此为双栈站点，可以自动选择IPv4或IPv6解析，将mirrors替换为mirrors6则只解析IPv6，替换为mirrors4则只解析IPv4，在校园网环境下，使用IPv6下载的文件不计流量。}，
+获取anaconda安装包列表。根据自己的操作系统版本和硬件架构，选择
+下载对应的安装包体（如Windows-x86\_64对应AMD，
+Intel处理器的Windows设备，MacOSX-arm64对应搭载Apple Silicon M1、M2、M3的设备）。
+在当前的时间节点，建议选择Anaconda3-2023.09开头的安装包。如图\ref{fig:anacondaSelection}所示
+\begin{figure}[htbp]
+    \centering
+    \includegraphics*[width=0.8\linewidth]{pic/tuna_anacondaDownload.png}
+    \caption{Anaconda3安装包示例}
+    \label{fig:anacondaSelection}
+\end{figure}
+
+对于不太熟悉命令行操作的同学来说，建议下载文件拓展名为pkg或exe的安装包，其可以提供图形化的安装界面和选项。具体安装过程在此不再赘述，
+但请注意，\textbf{不要}把Anaconda安装在\dotuline{含有中文的目录}下，尤其注意你的Windows用户名是否带有中文。如果你不确定，可以直接将其安装在C盘外的其
+他盘符\footnote{不要将Anaconda安装在C:/Program Files中}，另外创建的文件夹中。
+
+\subsection{环境变量与Spyder配置}
+
+安装流程结束后，在开始菜单（macOS：启动台）中寻找到Anaconda-Navigater
