@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  13 JAN 2024 21:08
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  14 JAN 2024 22:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -462,10 +462,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ]
 File: pic/tuna_anacondaDownload.png Graphic file (type bmp)
 <pic/tuna_anacondaDownload.png>
-)
 LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 91.
- [2] [3] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
+(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 39.
+ [2])
+Overfull \hbox (16.47551pt too wide) in paragraph at lines 42--91
+[]\TU/SongtiSCLight(0)/m/n/10 安 装 流 程 结 束 后，|  在 开 始 菜 单  |（\TU/lmr/m/n/10 macOS\TU/SongtiSCLight(0)/m/n/10 ：|  启 动 台）|  中 寻 找 到 \TU/lmr/m/n/10 Anaconda-
+ []
+
+[3] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
 Here is how much of TeX's memory you used:
  10053 strings out of 476683
  273018 string characters out of 5804047
