@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.15)  16 JAN 2024 00:44
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.15)  16 JAN 2024 00:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -518,4 +518,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  89i,8n,97p,531b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Python-handbook.xdv (12 pages, 116024 bytes).
+Output written on Python-handbook.xdv (12 pages, 116012 bytes).
