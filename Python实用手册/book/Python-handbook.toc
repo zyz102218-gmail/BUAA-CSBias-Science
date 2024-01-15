@@ -1,8 +1,6 @@
 \contentsline {chapter}{前言}{i}{}%
-\contentsline {chapter}{\numberline {第一章\hspace {.3em}}Python编辑及运行环境配置}{1}{}%
-\contentsline {section}{\numberline {1.1}Anaconda的下载与安装}{1}{}%
-\contentsline {subsection}{\numberline {1.1.1}写在前面}{1}{}%
-\contentsline {subsection}{\numberline {1.1.2}Anaconda下载与安装}{2}{}%
-\contentsline {subsection}{\numberline {1.1.3}环境变量与Spyder配置}{3}{}%
-\contentsline {subsubsection}{环境变量配置}{3}{}%
-\contentsline {subsubsection}{Spyder}{3}{}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}Python\nobreakspace {}编辑及运行环境配置}{1}{}%
+\contentsline {section}{\numberline {1.1}Anaconda的下载与安装}{2}{}%
+\contentsline {subsection}{\numberline {1.1.1}Anaconda下载与安装}{2}{}%
+\contentsline {subsection}{\numberline {1.1.2}环境变量配置}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}Spyder使用}{4}{}%
