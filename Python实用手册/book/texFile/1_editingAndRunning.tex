@@ -1,6 +1,6 @@
-\chapter{Python~编辑及运行环境配置}
+\chapter{Python~编辑及运行环境}
 在本课程中，我们选择安装anaconda这一Python发行版进行学习与开发。一方面是因为anaconda在安装时不仅仅能够安装一个python解释器，
-其也会同时安装ipython kernel，Jupyter notebook，matplotlib，scipy，numpy等多个常用的（也就是本课程中会用到的）第三方库。另一方面，anaconda提供Spyder这一高集成度，
+其也会同时安装IPython kernel，Jupyter notebook，matplotlib，scipy，numpy等多个常用的（也就是本课程中会用到的）第三方库。另一方面，anaconda提供Spyder这一高集成度，
 便于初学者学习和调试的IDE，可以提供给我们“开箱即用”的体验\footnote{anaconda本身也提供很多别的功能，本章节后面会进行简要介绍}。
 
 如果你想要挑战自己，当然可以自行到Python项目官网\footnote{https://python.org}上自行下载和安装Python解释器，而后使用pip包管理工具安装
@@ -60,10 +60,24 @@ anaconda提供了方便快捷的命令行环境的环境变量配置方式，只
     \label{fig:condaInit}
 \end{figure}
 
-而后，重新打开命令行（Windows 10/11中的终端\footnote{打开powershell时如果出现异常报错，则需要使用Win+X点选终端（管理员）打开powershell，运行Set-ExecutionPolicy RemoteSigned以使能脚本运行功能}，macOS中的控制台），可以看到在命令前面出现了(base)字样，表明当前激活的python环境是conda管理的base环境。
+而后，重新打开命令行
+（Windows 10/11中的终端\footnote{打开powershell时如果出现异常报错，则
+需要使用Win+X点选终端（管理员）打开powershell，运行Set-Execution
+Policy RemoteSigned以使能脚本运行功能}，macOS中的控制台），可以看到在命令
+前面出现了(base)字样，表明当前激活的python环境是conda管理的base环境。
 
-\subsection{Spyder使用}
-安装流程结束后，在开始菜单（macOS：启动台）中寻找到Anaconda-Navigater，点击运行。
+至此，anaconda 的环境配置已经基本结束。对于 Windows 用户，如有需要，还可以在高级系统设置中
+手动将 anaconda 安装目录下的 bin 和 Script 目录添加到 Path 中，在此不再赘述。今后的课程学习中，
+用到的可能性很小。
+
+\section{Spyder使用}
+Spyder 是今后我们在课程学习上将要主要使用的 IDE\footnote{集成开发环境}，也是考试时要用的考试机上
+所具备的唯二的 Python 代码编辑工具\footnote{另一个是 Python 安装时会有的 IDLE，不具备联想提示和调试功能}。
+Spyder 基于 IPython kernel 运行和调试 Python 代码，可以直观的将当前时刻各变量的值显示在窗口上，同时也具有
+命令行窗口，方便直接运行指令进行测试，或对变量值进行直接的修改。总之，对于初学者而言，Spyder 是非常简单，易用
+的 Python IDE。下面将会对Spyder的功能进行简单的介绍。
+
+安装流程结束后，在开始菜单（macOS：启动台）中寻找到 Anaconda Navigater，点击运行。
 加载结束后，可以打开Spyder，如图\ref{fig:navigater}所示
 \begin{figure}[htbp]
     \centering
@@ -73,7 +87,8 @@ anaconda提供了方便快捷的命令行环境的环境变量配置方式，只
 \end{figure}
 
 下面介绍Spyder主界面各面板的功能。但在开始之前，我们先来把Spyder的界面语言修改成中文。点选 
-Tools-Preferences 打开选项页面，而后在Application-Advanced settings中找到Languages，选择简体中文即可。如下图所示
+Tools-Preferences 打开选项页面，而后在Application-Advanced settings中找到Languages，选择简体中文即
+可。如下图所示。
 \begin{figure}[htbp]
     \begin{minipage}[h]{0.3\linewidth}
         \centering
@@ -85,7 +100,7 @@ Tools-Preferences 打开选项页面，而后在Application-Advanced settings中
         \includegraphics*[height=0.4\linewidth]{pic/Spyder_Language_2.png}
     \end{minipage}
 \end{figure}
-
+\newpage
 下面介绍Spyder主界面各面板的功能与作用。设置中文并打开Spyder后，初始界面如图\ref{fig:spyderMain}所示。
 \begin{figure}[htbp]
     \centering
@@ -93,3 +108,30 @@ Tools-Preferences 打开选项页面，而后在Application-Advanced settings中
     \caption{Spyder 主界面}
     \label{fig:spyderMain}
 \end{figure}
+左侧是代码编辑区域，可以在此修改和编辑Python程序的源代码。可以看到在源代码编辑框右侧，未到达编辑框边界处有一根纵向的线，
+这个位置代表 Python 源代码编写规范 PEP 8 中的要求，每行代码不超过79个字符。有兴趣的同学可以自行查找资料，深入了解 PEP 代
+码规范。简单来说，PEP 8 是对代码可读性提供的规范，用来保证程序员书写出的代码具有可读性和可维护性。还请大家尽量遵循代码规范，
+包括后面介绍基本语法时会提到的变量命名规范和注释规范等，方便各位同学后面再读懂自己的代码，也方便授课教师和我:-)。
+
+右侧上半部分有Spyder提示，变量浏览器，绘图和文件四个选项卡。
+Spyder提示可以显示库函数的帮助提示信息，具体使用方法在后面详细的语法部分将会进行更加详细的介绍。变量浏览器可以显示
+当前内存中所存放的变量，包括类型、大小\footnote{可以理解为规模，如3x2的数组会显示为(3,2)；普通的整形、浮点会显示为1}和值。
+不同版本的Spyder在处理变量浏览器选项卡时可能有所不同，但总体上大同小异。我们只需要了解，双击值这一列对应的格子即可看到和修改
+变量的值，便足够了。
+
+绘图和文件选项卡在前期使用的较少。绘图选项卡可以保存每一次使用 matplotlib 等库绘制出来的图片，形成一个历史记录，方便查阅和调用。
+具体使用方法将会在后面绘图的部分再行介绍。文件选项卡则会显示当前打开的 Python 文件所处的目录下面的文件，在后面进行文件操作
+或处理大作业时，观察和操作当前目录下有哪些文件\footnote{包括其他 Python 脚本或者数据文件}非常便利。
+
+右侧下半部分提供了一个命令行窗口，在此可以直接与 IPython 内核交互。Spyder 运行 Python 文件是使用 IPython 内核进行解释运行的，
+如果真的直接使用 Python.exe 对文件进行解释运行，在每一次运行完程序之后，Python.exe 不会驻留在后台，相关内存会被释放，自然也
+不能看到内存中存储的变量的情况。而原始的 Python 解释器也不提供调试功能。
+
+书归正题，在这个命令行窗口中，我们可以直接创建变量，运行命令，抑或是在调试过程中修改变量的值，都是可行的。具体的使用方法，在下一章
+将会结合具体代码进行概述。现在，你只需要了解到这个界面上各个块的功能即可。
+
+再行补充一个知识，在命令行窗口右侧上部，可以看到一个三横线选项卡，将其打开，里面有对 IPython 内核的交互。如图 所示。可以新建，中断
+或重启 IPython 内核。这对于程序陷入死循环或卡死时是十分有效的，可以在这里重启或直接开启一个新内核运行程序。当然，也可以直接关闭控制台
+选项卡，这也能起到关掉对应 IPython 内核的作用，当没有 IPython 内核在运行时，Spyder 会自动开启一
+个新的 IPython 内核\footnote{IPython中的I代表Interact，即交互。我一直将其称之为内核，其实其本质上就是一个进程，使用其运行 Python脚本，本质上就是
+要求这个进程读取这个文件并进行解释运行。如果想要深入了解IPython，可以访问ipython.org}。

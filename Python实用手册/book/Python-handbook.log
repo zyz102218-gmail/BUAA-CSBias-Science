@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.15)  15 JAN 2024 23:49
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.1.15)  16 JAN 2024 00:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,30 +496,26 @@ Overfull \hbox (5.62082pt too wide) in paragraph at lines 55--57
 [3]
 File: pic/anaconda_nav_Spyder.jpg Graphic file (type bmp)
 <pic/anaconda_nav_Spyder.jpg>
-
-Overfull \hbox (16.70769pt too wide) in paragraph at lines 66--74
-[]\TU/SimSun(0)/m/n/10 安 装 流 程 结 束 后，|  在 开 始 菜 单  |（\TU/lmr/m/n/10 macOS\TU/SimSun(0)/m/n/10 ：|  启 动 台）|  中 寻 找 到 \TU/lmr/m/n/10 Anaconda-
- []
-
 File: pic/Spyder_Language_1.png Graphic file (type bmp)
 <pic/Spyder_Language_1.png>
 
-Overfull \hbox (6.1107pt too wide) in paragraph at lines 80--81
+Overfull \hbox (6.1107pt too wide) in paragraph at lines 95--96
  [][] 
  []
 
 File: pic/Spyder_Language_2.png Graphic file (type bmp)
 <pic/Spyder_Language_2.png>
+[4] [5]
 File: pic/spyder主界面.png Graphic file (type bmp)
 <pic/spyder主界面.png>
-) [4] [5] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
+ [6]) [7] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
 Here is how much of TeX's memory you used:
- 10130 strings out of 476683
- 272845 string characters out of 5807575
+ 10154 strings out of 476683
+ 274277 string characters out of 5807575
  1862012 words of memory out of 5000000
- 30216 multiletter control sequences out of 15000+600000
+ 30240 multiletter control sequences out of 15000+600000
  516138 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,8n,97p,531b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Python-handbook.xdv (10 pages, 87272 bytes).
+Output written on Python-handbook.xdv (12 pages, 116024 bytes).
