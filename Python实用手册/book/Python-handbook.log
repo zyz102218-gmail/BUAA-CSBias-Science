@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  16 JAN 2024 16:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  16 JAN 2024 19:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -571,12 +571,17 @@ Package fontspec Info: Font family 'PingFangSC(0)' created for font 'PingFang
 (fontspec)             SC/BI/OT:script=hani;language=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
- [8] [9] [10] [11]) [12] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
+ [8] [9] [10] [11]
+Overfull \hbox (14.34471pt too wide) in paragraph at lines 253--254
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [12] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)) ) 
 Here is how much of TeX's memory you used:
- 11686 strings out of 476683
- 302924 string characters out of 5804047
+ 11690 strings out of 476683
+ 302971 string characters out of 5804047
  1871018 words of memory out of 5000000
- 31730 multiletter control sequences out of 15000+600000
+ 31734 multiletter control sequences out of 15000+600000
  516210 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,8n,97p,488b,1532s stack positions out of 10000i,1000n,20000p,200000b,200000s
