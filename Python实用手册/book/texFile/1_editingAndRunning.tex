@@ -135,3 +135,121 @@ Spyder提示可以显示库函数的帮助提示信息，具体使用方法在�
 选项卡，这也能起到关掉对应 IPython 内核的作用，当没有 IPython 内核在运行时，Spyder 会自动开启一
 个新的 IPython 内核\footnote{IPython中的I代表Interact，即交互。我一直将其称之为内核，其实其本质上就是一个进程，使用其运行 Python脚本，本质上就是
 要求这个进程读取这个文件并进行解释运行。如果想要深入了解IPython，可以访问ipython.org}。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\linewidth]{pic/ipython_interact.png}
+\end{figure}
+
+\section{pip和conda的使用*}
+在这一部分，我们将要介绍\texttt{pip}和\texttt{conda}的使用方法。这两个工具
+都可以作为环境下的包管理工具，conda同时还可以作为虚拟环境的管理工具。在课程中，
+我们使用这两个工具都不会特别深入，因此这里只介绍一些基础的使用方法。
+
+\subsection{pip包管理工具}
+Python 是一个具有系统性的包管理和共享体系的体系，pip 是python标准安装后会带有的包管理工具。
+如果想要下载或使用一个第三方库，如matplotlib，scipy等，可以先访问https://pypi.org 查看包名，
+文档和快速入门（如有）。也可以在这个平台上搜索第三方库。当搜索到一个第三方库后，可以使用下列格式的命令安装：
+\lstset{language=bash}
+\begin{lstlisting}
+    pip install <package name> <-U> <-i> <mirror>
+\end{lstlisting}
+\texttt{package name}参数是必选参数，是包名。\texttt{<-i mirror>}参数是指定 \texttt{pip} 从哪个镜像站下载软件包，
+\texttt{mirror}参数应当填写镜像站地址。比如下面这个例子
+\begin{lstlisting}
+    pip install scipy -U -i \
+    https://pypi.tuna.tsinghua.edu.cn/simple
+\end{lstlisting}
+其指定使用清华大学 TUNA 协会的
+镜像\footnote{另可参阅 TUNA 协会提供的 pypi 镜像使用
+帮助：\\https://mirrors.tuna.tsinghua.edu.cn/help/pypi/}，安装（以及升级）\texttt{scipy}库。
+要补充说明的是，上面这个代码框内的“\textbackslash ”的目的只是为了换行使用，无论是 bash 还是 python 中，“\textbackslash ”符号
+的含义均是将一行代码拆成两行书写，解释器会将第二行，甚至
+更多行（如果你连续使用“\textbackslash ”的话）的内容按照顺序拼接到一起来理解和执行。
+
+如果希望指定安装的库的版本，可以参考下面的示例：
+\begin{lstlisting}
+    pip install scipy==1.11.3
+\end{lstlisting}
+\subsection{conda环境管理工具}
+anaconda 是 conda 管理工具的一个发行版，除此之外，还有 miniconda 等更加精简的发行版本，其更加适合于
+诸如 Raspberry Pi 等资源相对有限的计算平台，以及运行在无头模式下的服务器上使用。本小节将集中于 conda 工具的
+使用的介绍。
+
+\subsubsection{conda创建和管理虚拟环境}
+在安装完毕之后，anaconda会自动创建一个base环境，在本课程中，我们大部分情况下都可以在base环境内进行操作，这是因为我们
+在课内所使用的第三方库的数量不是很多，集中在一个环境内进行操作不会带来什么问题。下面介绍一个可能的情况，在完成大作业时，
+课程要求我们建立一个 GUI，假设你需要使用 PyQt6 （或者新版本的 PyQt5 ）来建立你的GUI，这是一个非常好用的 GUI 库，而 Spyder 运行依赖
+于特定版本的 PyQt5，二者会产生冲突。在这种情况下，创建一个新的虚拟环境便是必要的了。
+
+下面介绍创建和管理虚拟环境的办法。conda 支持创建运行特定版本 python 的虚拟环境，如下所示：
+\begin{lstlisting}
+    conda create -n <name> python=<version>
+\end{lstlisting}
+\texttt{<name>}参数是虚拟环境的名称，支持大小写，且对大小写敏感。\texttt{<version>}是指定 python 解释器版本，
+支持到小版本如3.10.3。可以观察下面的示例
+\begin{lstlisting}
+    conda create -n MyPythonSpace python=3.10.3
+\end{lstlisting}
+这里我们指定创建一个名为\texttt{MyPythonSpace}的虚拟环境，解释器版本为 3.10.3 。运行时
+会提示是否继续，按下回车即为继续\footnote{形如\texttt{[y]/n}这样的确认提示，
+在不输入任何字符的情况下直接回车，则默认值为y，若为\texttt{y/[n]}，则默认值为n}，运行输出如下：
+\begin{lstlisting}
+    Channels:
+ - defaults
+Platform: osx-arm64
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: \
+    /Users/zhuyizhong/anaconda3/envs/MyPythonSpace
+
+  added / updated specs:
+    - python=3.10.3
+
+
+The following packages will be downloaded:
+
+## 此部分为Python解释器包信息，略去 ##
+
+The following NEW packages will be INSTALLED:
+
+## 此部分忽略 ##
+
+
+Proceed ([y]/n)? y
+
+
+Downloading and Extracting Packages:
+                                                                                                            
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+#     $ conda activate MyPythonSpace
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+\end{lstlisting}
+而后，运行\texttt{conda activate MyPythonSpace}，即可激活\\\texttt{MyPthonSpace}虚拟环境，如下：
+\begin{lstlisting}
+(base) bin % conda activate MyPythonSpace
+(MyPythonSpace) bin % python --version
+Python 3.10.3
+\end{lstlisting}
+需要返回\texttt{base}环境时，只需要运行\texttt{conda deactivate}即可。
+
+下面介绍使用conda安装第三方库的一个示例。在大部分情况下，我们使用pip安装第三方库已经足够了，但在这里还是介绍一下。
+同时，要注意，不要尝试使用pip管理conda安装的第三方库，反之亦然。
+
+使用conda安装PyTorch的方法如下：
+\begin{lstlisting}
+    # From https://pytorch.org
+    conda install pytorch::pytorch torchvision torchaudio -c pytorch
+\end{lstlisting}
+运行之后，conda会在当前激活的虚拟环境下安装 pytorch, torchvision, torchaudio 三个第三方库。
