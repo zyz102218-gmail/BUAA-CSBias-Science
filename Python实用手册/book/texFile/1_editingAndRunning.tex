@@ -1,4 +1,4 @@
-\chapter{Python~编辑及运行环境}
+\chapter{Python编辑及运行环境}
 在本课程中，我们选择安装anaconda这一Python发行版进行学习与开发。一方面是因为anaconda在安装时不仅仅能够安装一个python解释器，
 其也会同时安装IPython kernel，Jupyter notebook，matplotlib，scipy，numpy等多个常用的（也就是本课程中会用到的）第三方库。另一方面，anaconda提供Spyder这一高集成度，
 便于初学者学习和调试的IDE，可以提供给我们“开箱即用”的体验\footnote{anaconda本身也提供很多别的功能，本章节后面会进行简要介绍}。
@@ -280,4 +280,15 @@ conda env remove --name MyPythonSpace
 如果需要卸载软件包，可以运行\texttt{conda remove --name <env> <package>}进行卸载软件包的操作。如，卸载\texttt{MyPythonSpace}中的\texttt{numpy}软件包：
 \begin{lstlisting}
 conda remove --name MyPythonSpace numpy
+\end{lstlisting}
+
+下面介绍使用conda对环境中的第三方库进行升级的方法。但需要注意的是，如果你的环境当前可以满足需求，不需要
+用到新版本的特性，当前运行的版本也没有需要通过更新来修复的安全漏洞，那么就不要更新某个第三方库。同样的，
+也不必对整个环境内的第三方库进行统一的更新，但在此仍然介绍这种方法。
+\begin{lstlisting}
+conda update --all
+\end{lstlisting}
+这样，conda便会更新当前激活的环境下的所有库。相似的，更新某个库的方法为：
+\begin{lstlisting}
+conda update <package>
 \end{lstlisting}

@@ -1,5 +1,5 @@
 \contentsline {chapter}{前言}{i}{}%
-\contentsline {chapter}{\numberline {第一章\hspace {.3em}}Python\nobreakspace {}编辑及运行环境}{1}{}%
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}Python编辑及运行环境}{1}{}%
 \contentsline {section}{\numberline {1.1}Anaconda的下载与安装}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Anaconda下载与安装}{2}{}%
 \contentsline {subsection}{\numberline {1.1.2}环境变量配置}{3}{}%
