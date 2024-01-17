@@ -236,7 +236,7 @@ Executing transaction: done
 #     $ conda deactivate
 
 \end{lstlisting}
-而后，运行\texttt{conda activate MyPythonSpace}，即可激活\\\texttt{MyPthonSpace}虚拟环境，如下：
+而后，运行\texttt{conda activate MyPythonSpace}，即可激活\\\texttt{MyPythonSpace}虚拟环境，如下：
 \begin{lstlisting}
 (base) bin % conda activate MyPythonSpace
 (MyPythonSpace) bin % python --version
@@ -244,12 +244,40 @@ Python 3.10.3
 \end{lstlisting}
 需要返回\texttt{base}环境时，只需要运行\texttt{conda deactivate}即可。
 
+下面介绍使用conda对已有环境进行管理。首先，如果需要列出当前存在的所
+有由conda管理的环境，可以运行\texttt{conda env list}。
+其会列出当前存在的所有环境，以及其位置，如下列所示：
+\begin{lstlisting}
+# conda environments
+#
+base            /Users/username/anaconda3
+MyPythonSpace   /Users/username/anaconda3/envs/MyPythonSpace
+\end{lstlisting}
+如需删除某环境，可以考虑运行:
+\begin{lstlisting}
+conda env remove --name <env>
+\end{lstlisting}
+如删除\texttt{MyPythonSpace}这一环境：
+\begin{lstlisting}
+conda env remove --name MyPythonSpace
+\end{lstlisting}
+这一命令可以删除这个Python环境下的所有软件包以及这个环境本身。
+
+\subsubsection{使用conda进行包管理*}
 下面介绍使用conda安装第三方库的一个示例。在大部分情况下，我们使用pip安装第三方库已经足够了，但在这里还是介绍一下。
 同时，要注意，不要尝试使用pip管理conda安装的第三方库，反之亦然。
 
 使用conda安装PyTorch的方法如下：
 \begin{lstlisting}
     # From https://pytorch.org
-    conda install pytorch::pytorch torchvision torchaudio -c pytorch
+    conda install pytorch::pytorch torchvision \
+            torchaudio -c pytorch
 \end{lstlisting}
-运行之后，conda会在当前激活的虚拟环境下安装 pytorch, torchvision, torchaudio 三个第三方库。
+运行之后，conda会在当前激活的虚拟环境下安装 pytorch, torchvision, torchaudio 三个第三方库。在这里，
+\texttt{install}表明要求conda执行安装包的操作，\texttt{-c pytorch}指定在pytorch这一发行频道上查找
+软件包。
+
+如果需要卸载软件包，可以运行\texttt{conda remove --name <env> <package>}进行卸载软件包的操作。如，卸载\texttt{MyPythonSpace}中的\texttt{numpy}软件包：
+\begin{lstlisting}
+conda remove --name MyPythonSpace numpy
+\end{lstlisting}
