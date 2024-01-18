@@ -10,3 +10,6 @@
 \contentsline {subsubsection}{conda创建和管理虚拟环境}{9}{}%
 \contentsline {subsubsection}{使用conda进行包管理*}{12}{}%
 \contentsline {section}{习题1}{14}{}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}Python基本语法与程序控制结构}{15}{}%
+\contentsline {section}{\numberline {2.1}变量、输入与输出}{16}{}%
+\contentsline {subsubsection}{变量}{16}{}%

@@ -41,7 +41,20 @@
     keywordstyle    =   \color{blue},
     keywordstyle    =   [2] \color{teal},
     stringstyle     =   \color{magenta},
-    commentstyle    =   \color{red}\ttfamily,
+    commentstyle    =   \color{black}\ttfamily,
+    breaklines      =   true,   % 自动换行，建议不要写太长的行
+    columns         =   fixed,  % 如果不加这一句，字间距就不固定，很丑，必须加
+    basewidth       =   0.5em,
+}
+
+\lstdefinestyle{bash}{
+    language        =   bash, % 语言选Python
+    basicstyle      =   \zihao{-5}\ttfamily,
+    numberstyle     =   \zihao{-5}\ttfamily,
+    keywordstyle    =   \color{blue},
+    keywordstyle    =   [2] \color{teal},
+    stringstyle     =   \color{magenta},
+    commentstyle    =   \color{black}\ttfamily,
     breaklines      =   true,   % 自动换行，建议不要写太长的行
     columns         =   fixed,  % 如果不加这一句，字间距就不固定，很丑，必须加
     basewidth       =   0.5em,
@@ -109,7 +122,8 @@
 \newpage
 \tableofcontents
 \thispagestyle{empty}
-本书中所有代码，在Windows 11 23H2及macOS 14.2.1 23C71 arm64上以Anaconda 23.11.0, Python 3.11作为环境运行测试通过。具体第三方库版本见下：
+本书中所有代码，在Windows 11 23H2 x86\_64及macOS 14.2.1 23C71 arm64上
+以Anaconda 23.11.0, Python 3.11作为环境运行测试通过。具体第三方库版本见下：
 \begin{enumerate}
     \item scipy
     \item numpy
