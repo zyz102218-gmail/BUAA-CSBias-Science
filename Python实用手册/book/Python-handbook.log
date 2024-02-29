@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  22 JAN 2024 00:15
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.8.23)  29 FEB 2024 10:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -338,9 +338,7 @@ Package: listings 2023/02/27 1.9 (Carsten Heinz)
 Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count309
 \l__xeCJK_listings_flag_int=\count310
-) (./Python-handbook.aux (./texFile/1_editingAndRunning.aux)
-No file texFile/2_BasicGrammer.aux.
-)
+) (./Python-handbook.aux (./texFile/1_editingAndRunning.aux) (./texFile/2_BasicGrammer.aux))
 \openout1 = `Python-handbook.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -547,31 +545,31 @@ File: pic/Spyder_Language_2.png Graphic file (type bmp)
 File: pic/spyder主界面.png Graphic file (type bmp)
 <pic/spyder主界面.png>
  [6]
+File: pic/spyder主界面-快捷按钮.png Graphic file (type bmp)
+<pic/spyder主界面-快捷按钮.png>
+ [7]
 File: pic/ipython_interact.png Graphic file (type bmp)
 <pic/ipython_interact.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7] [8] [9] [10] [11] [12] [13]) [14]
+ [8] [9] [10] [11] [12] [13] [14]) [15]
 \openout2 = `texFile/2_BasicGrammer.aux'.
 
- (./texFile/2_BasicGrammer.tex
+ (./texFile/2_BasicGrammer.tex [16
+
+
+
+
+]
 第二章
 (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [15
-
-
-
-
-] [16] [17]) [18] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux) (./texFile/2_BasicGrammer.aux)) ) 
+) [17] [18] [19]) [20] (./Python-handbook.aux (./texFile/1_editingAndRunning.aux) (./texFile/2_BasicGrammer.aux)) ) 
 Here is how much of TeX's memory you used:
- 11851 strings out of 476683
- 307008 string characters out of 5804047
- 1943018 words of memory out of 5000000
- 31904 multiletter control sequences out of 15000+600000
+ 11896 strings out of 476683
+ 309562 string characters out of 5804047
+ 1947018 words of memory out of 5000000
+ 31946 multiletter control sequences out of 15000+600000
  516146 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,8n,97p,488b,1586s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,8n,97p,488b,1579s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Python-handbook.pdf (23 pages).
+Output written on Python-handbook.pdf (25 pages).
